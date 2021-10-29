@@ -1,7 +1,7 @@
 # opengl-geometry-dump
 This repository contains the example implementation for extracting the primitives of graphics pipeline using transform feedback. I implemented two example scenarios. One is extracting vertex from triangle mesh, and another is extracting original geometry.   
   
-The diagram below represents the idea of the function 'extract_triangle_mesh()' which implements original geometry extraction.  First, pass a unique vertex ID to the geometry shader. Then geometry shader writes position and ID of primitives to [transform feedback](https://www.khronos.org/opengl/wiki/Transform_Feedback) buffer. Finally, after the rendering process is finished, primitive information is copied to main memory. And mesh reconstruction is handled by unordered_map. For details, please see [main.cpp](main.cpp)._
+The diagram below represents the idea of the function 'extract_triangle_mesh()' which implements original geometry extraction.  First, pass a unique vertex ID to the geometry shader. Then geometry shader writes position and ID of primitives to [transform feedback](https://www.khronos.org/opengl/wiki/Transform_Feedback) buffer. Finally, after the rendering process is finished, primitive information is copied to main memory. And mesh reconstruction is handled by unordered_map. For details, please see [main.cpp](src/main.cpp).
 ![Idea of extract_triangle_mesh function](image/extract_triangle_mesh.svg)
 
 # Motivation
