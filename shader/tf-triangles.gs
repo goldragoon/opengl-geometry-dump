@@ -4,14 +4,17 @@ layout (triangles) in;
 layout (triangle_strip) out;
 layout (max_vertices = 3) out;
 
-out vec3 TF_VPOS;
-out float TF_VID;
-
 in VS_OUT
 {
     vec4 position;
     int vid;
 } gs_in[];
+
+out GS_OUT
+{
+    vec3 TF_VPOS;
+    float TF_VID;
+};
 
 void main(void)
 {
